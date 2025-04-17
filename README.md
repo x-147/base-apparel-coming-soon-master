@@ -98,3 +98,4 @@ This challenge is completely free. Please share it with anyone who will find it 
 
 - input::placeholder pseudoelement to style
 - input outline attribute is the border highlight when you click on the box
+- for responsiveness without media queries, use percentage-based widths with max-width constraints

@@ -27,7 +27,7 @@ body {
   padding-left: 100px;
   padding-right: 100px;
 
-  margin-top: 70px;
+  margin-top: 4.375rem;
 }
 
 .left-container-inside > img {
@@ -66,12 +66,14 @@ body {
   line-height: 1.5rem;
   font-weight: 400;
 
-  margin-right: 7rem;
+  width: 100%;
+  max-width: 27rem;
   margin-bottom: 2.5rem;
 }
 
 .email-address-container {
-  width: 27rem;
+  width: 100%;
+  max-width: 27rem;
   position: relative;
 }
 
@@ -87,7 +89,7 @@ input {
 
   text-indent: 1.5rem;
 
-  width: 27rem;
+  width: 100%;
   height: 2.5rem;
 
   opacity: 0.4;
