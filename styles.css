@@ -3,3 +3,68 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.main-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 1fr;
+}
+
+.left-container {
+}
+
+.left-container-inside {
+  padding-left: 100px;
+  padding-right: 100px;
+
+  margin-top: 70px;
+}
+
+.left-container-inside > img {
+  margin-bottom: 10rem;
+}
+
+.text-one {
+  color: hsl(0, 36%, 70%);
+  font-size: 4rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.text-two-one {
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.text-two-two {
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.text-two-container {
+  margin-bottom: 2rem;
+}
+
+.description {
+  color: hsl(0, 36%, 70%);
+  opacity: 0.7;
+  line-height: 1.5rem;
+  font-weight: 400;
+
+  margin-right: 7rem;
+}
