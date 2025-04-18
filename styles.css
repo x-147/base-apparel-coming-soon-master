@@ -100,6 +100,16 @@ input {
   outline: none;
 }
 
+button:hover {
+  box-shadow: 0px 8px 10px 1px hsl(0, 80%, 86%);
+
+  /* scaled by 2% */
+  height: 2.55rem;
+  width: 4.794rem;
+
+  top: -2%;
+}
+
 button {
   height: 2.5rem;
   width: 4.7rem;
