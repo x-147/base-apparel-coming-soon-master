@@ -99,3 +99,6 @@ This challenge is completely free. Please share it with anyone who will find it 
 - input::placeholder pseudoelement to style
 - input outline attribute is the border highlight when you click on the box
 - for responsiveness without media queries, use percentage-based widths with max-width constraints
+- autocomplete="off" doesn't prevent chrome from prompting for saved email addresses, instead use autocomplete="new-password"
+- you also need a dummy input element to throw chrome off so it doesn't now autocomplete with the last entered value
+- you can add 'required' attribute to input element for html validation, it also respects the type and check for valid email address

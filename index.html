@@ -41,10 +41,30 @@
 
           <!-- email address textbox / submit -->
           <div class="email-address-container">
-            <input type="email" placeholder="Email Address" />
-            <button type="submit">
-              <img src="./images/icon-arrow.svg" alt="arrow" />
-            </button>
+            <form action="/submit-endpoint" method="post">
+              <!-- dummy hidden field to throw off Chrome -->
+              <!-- makes chrome think it has already autofilled a input element -->
+              <input type="text" name="fake-email" style="display: none" />
+              <!-- add "required" to html validation (we are using js validation for this project) -->
+              <input
+                type="email"
+                name="email-address"
+                placeholder="Email Address"
+                autocomplete="new-password"
+              />
+              <button type="submit">
+                <img
+                  class="arrow-icon"
+                  src="./images/icon-arrow.svg"
+                  alt="arrow"
+                />
+                <img
+                  class="error-icon disable"
+                  src="./images/icon-error.svg"
+                  alt="error"
+                />
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -52,5 +72,27 @@
         <img src="./images/hero-desktop.jpg" alt="hero-desktop" />
       </div>
     </div>
+    <script>
+      const formElement = document.querySelector('form');
+      const inputElement = document.querySelector(
+        "input[name='email-address']"
+      );
+      const buttonElement = document.querySelector("button[type='submit']");
+      const errorImg = document.querySelector('button img.error-icon');
+      const successImg = document.querySelector('button img.arrow-icon');
+      formElement.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        if (event.target['email-address'].value == '') {
+          successImg.classList.add('disable');
+          errorImg.classList.remove('disable');
+        }
+      });
+
+      inputElement.addEventListener('click', (event) => {
+        errorImg.classList.add('disable');
+        successImg.classList.remove('disable');
+      });
+    </script>
   </body>
 </html>
