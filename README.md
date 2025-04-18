@@ -102,3 +102,6 @@ This challenge is completely free. Please share it with anyone who will find it 
 - autocomplete="off" doesn't prevent chrome from prompting for saved email addresses, instead use autocomplete="new-password"
 - you also need a dummy input element to throw chrome off so it doesn't now autocomplete with the last entered value
 - you can add 'required' attribute to input element for html validation, it also respects the type and check for valid email address
+- you could use input.checkValidity(), this works of html constraints ("required"), not ideal for custom message
+- novalidate (on form), to remove input validation (nested in form), and all other kinds of validation
+- transform: scale(), scale without affecting layout (this may have an effect on children?)
