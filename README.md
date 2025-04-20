@@ -106,3 +106,4 @@ This challenge is completely free. Please share it with anyone who will find it 
 - novalidate (on form), to remove input validation (nested in form), and all other kinds of validation
 - transform: scale(), scale without affecting layout (this may have an effect on children?)
 - outline used for focus indicators often without shifting layouts
+- use order to rearrange layout for responsive design

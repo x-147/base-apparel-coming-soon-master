@@ -21,16 +21,13 @@ body {
 }
 
 .left-container {
-}
-
-.left-container-inside {
   padding-left: 100px;
   padding-right: 100px;
 
   margin-top: 4.375rem;
 }
 
-.left-container-inside > img {
+.left-container > img {
   margin-bottom: 10rem;
 }
 
@@ -106,7 +103,6 @@ input {
 
 button:hover {
   box-shadow: 0px 8px 10px 1px hsl(0, 80%, 86%);
-
   transform: scale(1.05);
 }
 
@@ -138,4 +134,17 @@ button {
 
 .disable {
   visibility: hidden;
+}
+
+/* media queries */
+@media (max-width: 700px) {
+  html {
+    font-size: 8px;
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
 }

@@ -32,50 +32,48 @@
   <body>
     <div class="main-container">
       <div class="left-container">
-        <div class="left-container-inside">
-          <img src="./images/logo.svg" alt="logo" />
-          <div class="text-one">We're</div>
-          <div class="text-two-container">
-            <div class="text-two-one">Coming</div>
-            <div class="text-two-two">Soon</div>
-          </div>
-          <div class="description">
-            Hello fellow shoppers! We're currently building our new fashion
-            store. Add your email below to stay up-to-date with announcements
-            and our launch deals.
-          </div>
+        <img src="./images/logo.svg" alt="logo" />
+        <div class="text-one">We're</div>
+        <div class="text-two-container">
+          <div class="text-two-one">Coming</div>
+          <div class="text-two-two">Soon</div>
+        </div>
+        <div class="description">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </div>
 
-          <!-- email address textbox / submit -->
-          <div class="email-address-container">
-            <form action="/submit-endpoint" method="post" novalidate>
-              <!-- dummy hidden field to throw off Chrome -->
-              <!-- makes chrome think it has already autofilled a input element -->
-              <input type="text" name="fake-email" style="display: none" />
-              <!-- add "required" to html validation (we are using js validation for this project) -->
-              <input
-                type="email"
-                name="email-address"
-                placeholder="Email Address"
-                autocomplete="new-password"
+        <!-- email address textbox / submit -->
+        <div class="email-address-container">
+          <form action="/submit-endpoint" method="post" novalidate>
+            <!-- dummy hidden field to throw off Chrome -->
+            <!-- makes chrome think it has already autofilled a input element -->
+            <input type="text" name="fake-email" style="display: none" />
+            <!-- add "required" to html validation (we are using js validation for this project) -->
+            <input
+              type="email"
+              name="email-address"
+              placeholder="Email Address"
+              autocomplete="new-password"
+            />
+            <div class="error-icon-wrapper disable">
+              <img
+                class="error-icon"
+                src="./images/icon-error.svg"
+                alt="error"
               />
-              <div class="error-icon-wrapper disable">
-                <img
-                  class="error-icon"
-                  src="./images/icon-error.svg"
-                  alt="error"
-                />
-              </div>
-              <button type="submit">
-                <img
-                  class="arrow-icon"
-                  src="./images/icon-arrow.svg"
-                  alt="arrow"
-                />
-              </button>
+            </div>
+            <button type="submit">
+              <img
+                class="arrow-icon"
+                src="./images/icon-arrow.svg"
+                alt="arrow"
+              />
+            </button>
 
-              <div class="error-text disable">Please provide a valid email</div>
-            </form>
-          </div>
+            <div class="error-text disable">Please provide a valid email</div>
+          </form>
         </div>
       </div>
       <div class="right-container">
