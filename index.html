@@ -98,13 +98,17 @@
           errorImgWrapper.classList.remove('disable');
           errorText.classList.remove('disable');
           inputElement.style.outline = '0.125rem solid red';
+          inputElement.style.border = 'none';
         }
       });
 
       inputElement.addEventListener('click', (event) => {
         errorImgWrapper.classList.add('disable');
         errorText.classList.add('disable');
-        inputElement.style.outline = 'none';
+
+        // reset outline and border
+        inputElement.style.outline = '';
+        inputElement.style.border = '';
       });
     </script>
   </body>
