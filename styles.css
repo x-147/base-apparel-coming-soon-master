@@ -19,6 +19,8 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: 3fr 2fr; /* better ratio 3/2 vs 2/1 */
   height: 100vh;
+
+  min-width: max-content;
 }
 
 .left-container {
