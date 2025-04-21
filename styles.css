@@ -17,7 +17,7 @@ body {
 .main-container {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 2fr; /* better ratio 3/2 vs 2/1 */
 }
 
 .left-container {
@@ -27,7 +27,7 @@ body {
   margin-top: 4.375rem;
 }
 
-.left-container > img {
+.left-container img.logo {
   margin-bottom: 10rem;
 }
 
@@ -136,15 +136,177 @@ button {
   visibility: hidden;
 }
 
+.disable-perm {
+  display: none;
+}
+
+.right-container {
+  background-image: url('./images/hero-desktop.jpg');
+  background-repeat: no-repeat;
+}
+
 /* media queries */
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   html {
     font-size: 8px;
   }
 
   .main-container {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+  }
+
+  .left-container {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 4.375rem;
+
+    /* mobile changes */
+
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left-container img.logo {
+    /* mobile changes */
+    margin: 0;
+    margin-bottom: 30px;
+    margin-left: 17px;
+    align-self: flex-start;
+    transform: scale(0.8);
+  }
+
+  .text-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .text-two-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-two-one {
+    letter-spacing: 2rem;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 400;
+  }
+
+  .text-two-two {
+    letter-spacing: 2rem;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 400;
+  }
+
+  .text-one {
+    font-size: 5rem;
+  }
+
+  .description {
+    font-size: 1.9rem;
+    line-height: 3rem;
+    text-align: center;
+
+    width: 330px;
+    max-width: none;
+
+    margin-bottom: 30px;
+  }
+
+  .right-container {
+    display: none;
+  }
+
+  .disable-perm {
+    display: block;
+  }
+
+  .email-address-container {
+    width: 80%;
+    max-width: none;
+    position: relative;
+  }
+
+  input {
+    border-radius: 5rem 6rem 6rem 5rem;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: hsl(0, 36%, 70%);
+
+    text-indent: 1.5rem;
+    padding-right: 8rem; /* so error icon don't overlap */
+
+    width: 100%;
+    height: 5rem;
+
+    opacity: 0.4;
+    outline: none;
+  }
+
+  button {
+    height: 5rem;
+    width: 8rem;
+    border-radius: 5rem;
+
+    border-width: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0%;
+    right: 0%;
+
+    background-image: linear-gradient(
+      135deg,
+      hsl(0, 80%, 86%),
+      hsl(0, 74%, 74%)
+    );
+
+    cursor: pointer;
+  }
+
+  .error-text {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    color: hsl(0, 74%, 74%);
+    font-size: 0.9rem;
+
+    /* mobile */
+    margin: 0;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 54%;
+    left: 3%;
+  }
+
+  .error-icon-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translateY(-50%);
+  }
+
+  .input-error-wrapper {
+    position: relative;
+
+    margin-bottom: 50px;
   }
 }
